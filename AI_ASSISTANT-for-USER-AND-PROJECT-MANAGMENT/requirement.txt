@@ -1,0 +1,10 @@
+asyncio
+json
+os
+python-dotenv
+openpyxl
+fastapi
+openai==1.30.5
+difflib
+logging
+httpx
