@@ -1,0 +1,118 @@
+{
+  "actions": [
+    {
+      "action_id": "1001",
+      "title": "Send Email",
+      "description": "This action allows sending emails to specified recipients.",
+      "endpoints": "https://api.sendgrid.com/v3/mail/send",
+      "input_parameters": {
+        "sender_email": "string",
+        "recipient_emails": ["string"],
+        "subject": "string",
+        "body": "string"
+      }
+    },
+    {
+      "action_id": "1002",
+      "title": "Schedule Meeting",
+      "description": "This action allows scheduling a meeting with specified attendees.",
+      "endpoints": "https://api.calendar.google.com/calendar/v3/calendars/events",
+      "input_parameters": {
+        "attendees": ["string"],
+        "date": "YYYY-MM-DD",
+        "start_time": "HH:MM",
+        "end_time": "HH:MM",
+        "description": "string"
+      }
+    },
+    {
+      "action_id": "1003",
+      "title": "Prepare Document",
+      "description": "This action allows creating or editing a document.",
+      "endpoints": "https://api.example.com/prepare-document",
+      "input_parameters": {
+        "document_name": "string",
+        "content": "string"
+      }
+    },
+    {
+      "action_id": "1004",
+      "title": "Set Reminder",
+      "description": "This action allows setting reminders for specific events or tasks.",
+      "endpoints": "https://api.example.com/set-reminder",
+      "input_parameters": {
+        "reminder_date": "YYYY-MM-DD",
+        "reminder_time": "HH:MM",
+        "reminder_message": "string"
+      }
+    },
+    {
+      "action_id": "1005",
+      "title": "Send Message",
+      "description": "This action allows sending messages to specified recipients.",
+      "endpoints": "https://slack.com/api/chat.postMessage",
+      "input_parameters": {
+        "sender": "string",
+        "recipients": ["string"],
+        "message": "string"
+      }
+    },
+    {
+      "action_id": "1006",
+      "title": "Order a Pizza",
+      "description": "This action allows ordering pizza from Domino's.",
+      "endpoints": "https://www.dominos.co.in/",
+      "input_parameters": {
+        "size": "string",
+        "toppings": ["string"],
+        "delivery_address": "string"
+      },
+      "size_options": ["8 inches", "10 inches", "12 inches"],
+      "toppings_available": {
+        "non-veg": {
+          "chicken": 100,
+          "mutton": 120,
+          "fish": 110,
+          "beef": 130
+        },
+        "veg": {
+          "paneer": 90,
+          "onion": 80,
+          "tomato": 70,
+          "olive": 85,
+          "potato": 75
+        }
+      },
+      "base_price": {
+        "8 inches": 200,
+        "10 inches": 250,
+        "12 inches": 300
+      },
+      "total_price": "integer"
+    },
+    
+    {
+      "action_id": "1007",
+      "title": "Book a Movie Ticket",
+      "description": "This action allows booking tickets for movies.",
+      "endpoints": "https://in.bookmyshow.com/explore/home/bhopal",
+      "input_parameters": {
+        "movie_name": "string",
+        "date": "YYYY-MM-DD",
+        "time": "HH:MM",
+        "cinema_location": "string",
+        "seats": "integer"
+      }
+    },
+    {
+      "action_id": "1008",
+      "title": "Get project detail",
+      "description": "User may need to learn information about a real estate project. This action will call project detail API and Fetch detail of the Project based on user query parameters",
+      "endpoints": "https://project.evoluxar.com/search",
+      "input_parameters": {
+        "project_name": "Name of the project where information is needed by user",
+        "Location": "Location of the project like city, state or a locality in a city"
+      }
+    }
+  ]
+}
